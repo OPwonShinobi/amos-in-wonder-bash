@@ -8,7 +8,6 @@ cat "./txt/outro"
 # enter blank line (most importantly a newline)
 echo
 
-# :foreverloop 
 while read userInput < /dev/tty; do
 	# all choices coded into scenes are uppercase
 	# convert userInput to all uppercase to do case-insensitive check

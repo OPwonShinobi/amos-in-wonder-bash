@@ -8,9 +8,9 @@ fi
 # save current node letter as something more readable
 currentNode=$1
 
-# # read & display the current scene text
+# read & display the current scene text
 cat "./txt/${currentNode}"
-# #empty line after printing body of text
+# empty line after printing body of text
 echo
 
 # Scan choice file for possible middle commands and paths
@@ -32,7 +32,6 @@ while read cmd node; do
 	exec ./end.sh $currentNode
 done < <(awk /end/ ./txt/${currentNode}C)
 
-# :foreverloop
 while [[ ${userInput} != ${nextNode1} && ${userInput} != ${nextNode2} ]]; do
 	# The previous while loop seems to mess with default stream read uses
 	# Explicitly read from stdin

@@ -24,3 +24,13 @@ start.sh is the only file that can be opened directly, the other ones will close
 
 > end.sh
 	Handles ending scenes.
+
+Differences Between The Bash and Batch Versions
+-----------------------------------------------
+The first version of the choose-your-own-adventure script I wrote, Amos In Wonder Batch, runs on Windows 7+ in Batch script. As Windows Photo Viewer(rundll32.exe) comes default on Windows 7+, I could include it in my script and expect images to work. 
+
+I had some trouble with images in Linux, especially since I started writing this on the Linux Subsystem for Windows, and almost all unix gui applications wouldn't work. Since they weren't a major part of the game, I took out images for this version (they were even optional in the windows version, you could turn them off).
+
+Gnome-terminal and xdg-open wouldn't work properly in the subsystem either, so I couldn't find a way to force maximize / reposition / close new windows easily, like I could using cmdow in batch. So this version's terminal looks arguably worse. 
+
+So, this bash version is closer to a genuine text-adventure, while the batch version is closer to the mixed-media abomination me and friends wrote in high school. 

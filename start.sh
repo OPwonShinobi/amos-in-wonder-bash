@@ -1,11 +1,11 @@
 #!/bin/bash
-echo 'Please maximize window for best viewing experience.'
-# # enlarge cmd window to full screen if is not already
+echo 'Please maximize terminal for best viewing experience.'
+# enlarge cmd window to full screen if is not already
 cat "./txt/intro"
-# # empty line after printing body of text
+# empty line after printing body of text
 echo
 
-# # scan choice file for possible middle commands and paths
+# scan choice file for possible middle commands and paths
 while read cmd node; do
 # 	if not defined nextNode1 
 	if [[ -z ${nextNode1} ]]; then
@@ -15,7 +15,7 @@ while read cmd node; do
 	fi
 done < <(awk /middle/ ./txt/introC)
 
-# foreverloop
+# could've use select menu, but format isn't what I wanted 
 while [[ ${userInput} != ${nextNode1} && ${userInput} != ${nextNode2} ]]; do
 	# The previous while loop seems to mess with default stream read uses
 	# Explicitly read from stdin
