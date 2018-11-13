@@ -11,19 +11,19 @@ They are more or less the same with minor differences:
 
 start.sh is the only file that can be opened directly, the other ones will close if directly opened to avoid undefined behaviour (also skipping to a certain point in the story is just bad story telling).
 
-> ./txt
+#### start.sh
+	Run this script to start the game. loads the first scene.
+
+#### middle.sh
+	Loads every scene (not endings) after the first.
+
+#### end.sh
+	Handles ending scenes.
+
+#### ./txt
 	This folder stores the scenarios and story layout. The story 
 	letter : this stores that scenario's text
 	letterC :  this stores the scenario's next possible paths
-
-> start.sh
-	Run this script to start the game. loads the first scene.
-
-> middle.sh
-	Loads every scene (not endings) after the first.
-
-> end.sh
-	Handles ending scenes.
 
 Differences Between The Bash and Batch Versions
 -----------------------------------------------
